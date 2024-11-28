@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: #fff;
 }
 
 .body {
@@ -187,65 +187,40 @@ p {
     }
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
-
-/* For smaller screens like phones */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    /* .birthdayCard {
-        width: 100%;
+    .body {
+        margin-top: 50px;
+    }
+
+    .birthdayCard {
+        width: 95%;
         height: auto;
-    } */
+    }
 
     .bdHat {
         width: 30%;
-        /* Smaller hat size */
-        top: 10%;
         left: 15%;
     }
 
-    .balloons {
-        width: 55%;
-        /* Adjust balloons size */
-        top: 10%;
-    }
-
-    .jessImg {
-        width: 60%;
-        /* Smaller image for mobile */
-        top: 30%;
-    }
-
     .happy {
-        font-size: 1rem;
-        /* Adjust text size */
-        top: 90%;
-    }
-
-    .cardInside {
-        padding: 15px;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    .back {
-        font-size: 1rem;
+        font-size: 1em;
     }
 }
 
-/* For laptops or larger screens */
-@media (min-width: 769px) and (max-width: 1200px) {
-    /* .birthdayCard {
-        width: 80%;
-        height: auto;
-    } */
-
-    .jessImg {
-        width: 65%;
+@media (max-width: 480px) {
+    .happy {
+        font-size: 0.9em;
+        bottom: 10%;
     }
 
-    .happy {
-        font-size: 1.4rem;
+    .bdHat {
+        width: 35%;
+        left: 10%;
+    }
+
+    .balloons {
+        width: 60%;
+        top: 10px;
     }
 }
