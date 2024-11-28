@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: black;
 }
 
 .body {
@@ -36,8 +36,9 @@ body {
 .bdHat {
     width: 140px;
     height: auto;
-    top: 5%;
-    left: 13%;
+    top: 4%;
+    left: 17%;
+    /* right: 170px; */
     transform: rotate(-30deg);
     position: absolute;
     z-index: 4;
@@ -49,6 +50,9 @@ body {
     height: auto;
     right: -10px;
     top: 30px;
+    right: -20px;
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
 }
 
 .jessImg {
@@ -60,18 +64,23 @@ body {
     width: 300px;
     height: auto;
     z-index: 1;
+    background-size: cover;
 }
 
 .happy {
     text-align: center;
     left: 10%;
-    top: 84%;
-    font-size: 1.5em;
+    top: 75%;
+    font-size: 500px;
     font-family: Tahoma, sans-serif;
     color: hotpink;
     position: absolute;
     transition: 0.1s;
     z-index: 6;
+
+    font-family: "Anton", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .cardInside {
@@ -86,6 +95,20 @@ body {
     box-shadow: inset 100px 20px 100px rgba(191, 190, 190, 0.2);
 }
 
+.cardInside .party {
+    width: 100px;
+    margin-top: 10%;
+    /* margin-left: 70%; */
+    /* transform: rotate(250deg); */
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
+    transition: transform 0.5s ease;
+}
+
+/* .cardInside .party:hover {
+    transform: rotate(10deg);
+} */
+
 p {
     line-height: 30px;
     margin: 15px 10px 10px 30px;
@@ -97,6 +120,10 @@ p {
     color: #333;
     text-align: center;
     margin: 30px;
+    font-size: 25px;
+    font-family: "Anton", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .birthdayCard:hover {
@@ -111,4 +138,114 @@ p {
 
 .birthdayCard:hover .happy {
     visibility: hidden;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.jessImg {
+    position: relative;
+    top: 100px;
+    left: 50%;
+    width: auto;
+    /* Maintain the original width */
+    height: auto;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.happy {
+    font-size: 1.5em;
+    color: #ff69b4;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px pink;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 1px 1px 2px pink;
+    }
+
+    to {
+        text-shadow: 1px 1px 2px pink;
+    }
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* For smaller screens like phones */
+@media (max-width: 768px) {
+    /* .birthdayCard {
+        width: 100%;
+        height: auto;
+    } */
+
+    .bdHat {
+        width: 30%;
+        /* Smaller hat size */
+        top: 10%;
+        left: 15%;
+    }
+
+    .balloons {
+        width: 55%;
+        /* Adjust balloons size */
+        top: 10%;
+    }
+
+    .jessImg {
+        width: 60%;
+        /* Smaller image for mobile */
+        top: 30%;
+    }
+
+    .happy {
+        font-size: 1rem;
+        /* Adjust text size */
+        top: 90%;
+    }
+
+    .cardInside {
+        padding: 15px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .back {
+        font-size: 1rem;
+    }
+}
+
+/* For laptops or larger screens */
+@media (min-width: 769px) and (max-width: 1200px) {
+    /* .birthdayCard {
+        width: 80%;
+        height: auto;
+    } */
+
+    .jessImg {
+        width: 65%;
+    }
+
+    .happy {
+        font-size: 1.4rem;
+    }
 }
