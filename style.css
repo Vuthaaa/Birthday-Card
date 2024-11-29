@@ -96,9 +96,11 @@ body {
 }
 
 .cardInside .party {
+    position: absolute;
+    height: auto;
     width: 100px;
     margin-top: 10%;
-    /* margin-left: 70%; */
+    margin-left: 5%;
     /* transform: rotate(250deg); */
     opacity: 0.9;
     animation: float 6s ease-in-out infinite;
@@ -139,6 +141,15 @@ p {
 .birthdayCard:hover .happy {
     visibility: hidden;
 }
+
+/* iframe {
+    border: 2px solid pink;
+    width: 80%;
+    height: 300px;
+    margin: 20px auto;
+    display: block;
+} */
+
 
 @keyframes float {
 
@@ -204,19 +215,20 @@ p {
     }
 
     .happy {
-        font-size: 1em;
+        font-size: 1.4em;
     }
 }
 
 @media (max-width: 480px) {
     .happy {
-        font-size: 0.9em;
-        bottom: 10%;
+        font-size: 1.3em;
+        top: 80%;
     }
 
     .bdHat {
         width: 35%;
-        left: 10%;
+        left: 18%;
+        top: 1.5%;
     }
 
     .balloons {
